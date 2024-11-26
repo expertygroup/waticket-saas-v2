@@ -12,12 +12,9 @@ import Contact from "../../models/Contact";
 import Setting from "../../models/Setting";
 import Ticket from "../../models/Ticket";
 import Whatsapp from "../../models/Whatsapp";
-import { Mutex } from "async-mutex";
 import { logger } from "../../utils/logger";
 import createOrUpdateBaileysService from "../BaileysServices/CreateOrUpdateBaileysService";
 import CreateMessageService from "../MessageServices/CreateMessageService";
-
-const contactMutex = new Mutex();
 
 type Session = WASocket & {
   id?: number;
@@ -104,17 +101,13 @@ const wbotMonitor = async (
     });
 
     wbot.ev.on("contacts.upsert", async (contacts: BContact[]) => {
-      contactMutex.runExclusive(async () => {
-        await createOrUpdateBaileysService({
-          whatsappId: whatsapp.id,
-          contacts
-        });
+
+      await createOrUpdateBaileysService({
+        whatsappId: whatsapp.id,
+        contacts,
       });
     });
 
-    // wbot.ev.on("contacts.set", async (contacts: IContact) => {
-    //  console.log("set", contacts);
-    // });
   } catch (err) {
     Sentry.captureException(err);
     logger.error(err);

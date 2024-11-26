@@ -16,8 +16,7 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Switch from "@material-ui/core/Switch";
+
 import { i18n } from "../../translate/i18n";
 
 import api from "../../services/api";
@@ -70,7 +69,6 @@ const ContactModal = ({ open, onClose, contactId, initialValues, onSave }) => {
 		name: "",
 		number: "",
 		email: "",
-		disableBot: false
 	};
 
 	const [contact, setContact] = useState(initialState);
@@ -187,23 +185,12 @@ const ContactModal = ({ open, onClose, contactId, initialValues, onSave }) => {
 										variant="outlined"
 									/>
 								</div>
-								<>
-								<FormControlLabel
-									label={i18n.t("contactModal.form.disableBot")}
-									labelPlacement="start"
-									control={
-										<Switch
-											size="small"
-											checked={values.disableBot}
-											onChange={() =>
-                        setContact({ ...values, disableBot: !values.disableBot })
-											}
-											name="disableBot"
-											color="primary"
-										/>
-									}
-								/>
-								</>
+								<Typography
+									style={{ marginBottom: 8, marginTop: 12 }}
+									variant="subtitle1"
+								>
+									{i18n.t("contactModal.form.whatsapp")} {contact?.whatsapp ? contact?.whatsapp.name : ""}
+								</Typography>
 								<Typography
 									style={{ marginBottom: 8, marginTop: 12 }}
 									variant="subtitle1"

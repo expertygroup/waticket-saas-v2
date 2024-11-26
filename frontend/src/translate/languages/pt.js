@@ -110,7 +110,6 @@ const messages = {
         },
         table: {
           name: "Nome",
-		  number: "Número",
           status: "Status",
           lastUpdate: "Última atualização",
           default: "Padrão",
@@ -172,15 +171,8 @@ const messages = {
           deleteAllMessage: "Tem certeza que deseja deletar todos os contatos? Todos os tickets relacionados serão perdidos.",
           importMessage: "Deseja importar todos os contatos do telefone?",
         },
-		confirmationModal:{
-			importTitlte: "Importar contatos",
-			importMessage: "Esta ação irá importar os contatos salvos na agenda do WhatsApp. Alguns modelos podem não permitir essa funcionalidade ou de acordo com sua configuração de privacidade! Verifique em até 1 hora o resultado.",
-			deleteTitle:"Deletar",
-			deleteMessage:"Tem certeza que deseja deletar este contato? Todos os atendimentos relacionados serão perdidos.",
-		},
         buttons: {
           import: "Importar Contatos",
-		  importSheet: "Import. Excel",
           add: "Adicionar Contato",
           export: "Exportar Contatos",
           delete: "Excluir Todos Contatos"
@@ -285,7 +277,6 @@ const messages = {
           email: "Email",
           extraName: "Nome do campo",
           extraValue: "Valor",
-		  disableBot: "Desabilitar chatbot",
           whatsapp: "Conexão Origem: "
         },
         buttons: {
@@ -301,9 +292,6 @@ const messages = {
           add: "Adicionar fila",
           edit: "Editar fila",
         },
-		confirmationModal: {
-		  "deleteTitle": "Excluir",
-		},
         form: {
           name: "Nome",
           color: "Cor",
@@ -319,21 +307,6 @@ const messages = {
           okAdd: "Adicionar",
           okEdit: "Salvar",
           cancel: "Cancelar",
-		  attach: "Anexar Arquivo",
-        },
-		 serviceHours: {
-          dayWeek: "Dia da semana",
-          startTimeA: "Hora Inicial - 1",
-          endTimeA: "Hora Final - 1",
-          startTimeB: "Hora Inicial - 2",
-          endTimeB: "Hora Final - 2",
-          monday: "Segunda-feira",
-          tuesday: "Terça-feira",
-          wednesday: "Quarta-feira",
-          thursday: "Quinta-feira",
-          friday: "Sexta-feira",
-          saturday: "Sábado",
-          sunday: "Domingo",
         },
       },
       userModal: {
@@ -405,22 +378,12 @@ const messages = {
       ticketsManager: {
         buttons: {
           newTicket: "Novo",
-          closeallTicket: "Fechar"
         },
       },
       ticketsQueueSelect: {
         placeholder: "Filas",
       },
       tickets: {
-        inbox: {
-          closedAllTickets: "Fechar todos os tickets?",
-          closedAll: "Fechar Todos",
-          newTicket: "Novo Ticket",
-          yes: "SIM",
-          no: "NÃO",
-          open: "Abertos",
-          resolverd: "Resolvidos",
-        },
         toasts: {
           deleted: "O atendimento que você estava foi deletado.",
         },
@@ -434,16 +397,6 @@ const messages = {
         },
         search: {
           placeholder: "Buscar atendimento e mensagens",
-          filterConnections: "Filtro por conexões",
-          filterContacts: "Filtro por contato",
-          filterConections: "Filtro por Conexão",
-          filterConectionsOptions: {
-            open: "Aberto",
-            closed: "Fechado",
-            pending: "Pendente",
-          },
-          filterUsers: "Filtro por Usuarios",
-          ticketsPerPage: "Tickets por página"
         },
         buttons: {
           showAll: "Todos",
@@ -469,9 +422,7 @@ const messages = {
         buttons: {
           accept: "Aceitar",
           closed: "Finalizar",
-		  transfer: "Transferir",
-          reopen: "Reabrir",
-		  exportAsPDF: "Exportar em PDF"
+          reopen: "Reabrir"
         },
       },
       newTicketModal: {
@@ -504,7 +455,6 @@ const messages = {
           financeiro: "Financeiro",
           files: "Lista de arquivos",
           prompts: "Open.Ai",
-		  reports: "Relatórios",
           queueIntegration: "Integrações",
         },
         appBar: {
@@ -536,27 +486,6 @@ const messages = {
             "Você tem certeza? Essa ação não pode ser revertida! e será removida das filas e conexões vinculadas",
         },
       },
-	reports: {
-        title: "Relatórios de Atendimentos",
-        table: {
-          id: "Ticket",
-          user: "Usuário",
-          dateOpen: "Data Abertura",
-          dateClose: "Data Fechamento",
-          NPS: "NPS",
-          status: "Status",
-          whatsapp: "Conexão",
-          queue: "Fila",
-          actions: "Ações",
-          lastMessage: "Últ. Mensagem",
-          contact: "Cliente",
-          supportTime: "Tempo de Atendimento"
-        },
-        buttons: {
-          filter: "Aplicar Filtro",
-        },
-        searchPlaceholder: "Pesquisar...",
-      },	  
       files: {
         title: "Lista de arquivos",
         table: {
@@ -624,14 +553,13 @@ const messages = {
           add: "Adicionar",
           edit: "Editar",
           visao: "Permitir visão",
-		  geral: 'Global',
         },
         table: {
           shortcode: "Atalho",
           message: "Mensagem",
           actions: "Ações",
           mediaName: "Nome do Arquivo",
-          status: 'Global',
+          status: "Status",
         },
       },
       messageVariablesPicker: {
@@ -848,14 +776,9 @@ const messages = {
         table: {
 		  id: "ID",
           name: "Nome",
-		  status: "Status",
           email: "Email",
           profile: "Perfil",
           actions: "Ações",
-        },
-		status: {
-          online: "Usuários online",
-          offline: "Usuários offline",
         },
         buttons: {
           add: "Adicionar usuário",
@@ -1002,12 +925,7 @@ const messages = {
       },
       messageOptionsMenu: {
         delete: "Deletar",
-		reactionSuccess: "Reação add",
         reply: "Responder",
-		edit: 'Editar Mensagem',
-		forward: "Encaminhar",
-        toForward: "Encaminhar",
-		react: "Reagir",
         confirmationModal: {
           title: "Apagar mensagem?",
           message: "Esta ação não pode ser revertida.",

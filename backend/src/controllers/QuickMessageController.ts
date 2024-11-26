@@ -27,7 +27,6 @@ type StoreData = {
   shortcode: string;
   message: string;
   userId: number | number;
-  geral: boolean;  
 };
 
 type FindParams = {
@@ -36,8 +35,8 @@ type FindParams = {
 };
 
 export const index = async (req: Request, res: Response): Promise<Response> => {
-  const { searchParam, pageNumber } = req.query as IndexQuery;
-    const { companyId, id: userId } = req.user;
+  const { searchParam, pageNumber, userId } = req.query as IndexQuery;
+  const { companyId } = req.user;
 
   const { records, count, hasMore } = await ListService({
     searchParam,
